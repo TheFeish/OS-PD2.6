@@ -23,7 +23,7 @@ extern "C"
 DLL_API void F1(std::chrono::steady_clock::time_point);
 
 extern "C"
-DLL_API void F2(std::string, std::string);
+DLL_API void F2();
 
 extern "C"
 DLL_API void F3();

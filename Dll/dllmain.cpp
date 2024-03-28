@@ -7,7 +7,12 @@ void F1(std::chrono::steady_clock::time_point start) {
     std::cout << "Vykdymo laikas: " << duration.count() << "s" << std::endl;
 }
 
-void F2(std::string user, std::string time) {
+void F2() {
+    std::string user, time;
+    std::cout << "Iveskite vartotojo varda:" << std::endl;
+    std::cin >> user;
+    std::cout << "Iveskite laiko apribojima:" << std::endl;
+    std::cin >> time;
     std::string s = "net user " + user + " /time:" + time;
     system(s.c_str());
 }
@@ -23,9 +28,11 @@ void F3() {
             system(l3.c_str());
         }
     }
+    std::cout << "Sukurti aplankai" << std::endl;
 }
 
 void F4(float F, float x0, float x1, float deltax) {
+    std::cout << "Pradedamas funkcijos skaiciavimas su F = " << F << std::endl;
     int l2 = 1, l3 = 1;
     std::ofstream file;
     for (float x = x0; x <= x1; x += deltax) {
@@ -52,6 +59,7 @@ void F4(float F, float x0, float x1, float deltax) {
             }
         }
     }
+    std::cout << "Baigtas funkcijos skaiciavimas su F = " << F << std::endl;
 }
 
 bool F5Sort(std::string i, std::string j) {
@@ -93,9 +101,11 @@ void F5(float F) {
         output << line << std::endl;
     }
     output.close();
+    std::cout << "Baigtas failu rusiavimas su F = " << F << std::endl;
 }
 
 void F6() {
     std::string s = "rmdir Malinauskas /s /q";
     system(s.c_str());
+    std::cout << "Laikini failai istrinti" << std::endl;
 }
