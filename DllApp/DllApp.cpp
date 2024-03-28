@@ -3,7 +3,7 @@
 int main()
 {
     auto start = std::chrono::high_resolution_clock::now();
-    F2("test", "M-Su,18:00-20:00");
+    F2();
     F3();
     for (int F = -2; F <= 2; F++) {
         F4(F, -(studentoId % 19), studentoId % 25, studentoId / 1000000000000.0);
